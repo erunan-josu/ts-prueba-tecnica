@@ -21,7 +21,7 @@ const PRIMARY_PALETTE = {
 const SECONDARY_PALETTE = {
   moon: '#999',
   snow: 'f4f4f4',
-  coal: '#333',
+  clear: '#f8f8f8',
 }
 
 const ALERT_PALETTE = {
@@ -32,13 +32,13 @@ const ALERT_PALETTE = {
 
 export const theme = {
   palette: {
-    background: SECONDARY_PALETTE.coal,
+    background: SECONDARY_PALETTE.clear,
     title: PRIMARY_PALETTE.pink,
     text: SECONDARY_PALETTE.snow,
     button: {
       background: PRIMARY_PALETTE.pink,
       border: SECONDARY_PALETTE.snow,
-      text: SECONDARY_PALETTE.coal,
+      text: SECONDARY_PALETTE.clear,
     },
     alert: {
       error: ALERT_PALETTE.error,

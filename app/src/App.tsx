@@ -1,15 +1,23 @@
 import './App.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import MainLayout from './components/ui/layout/MainLayout'
+import styled from '@emotion/styled'
 
 const App = () => {
   return (
     <MainLayout>
-      <nav>
+      <Navbar>
         <NavLink to="/">Home</NavLink>
-      </nav>
+      </Navbar>
+      <Outlet />
     </MainLayout>
   )
 }
 
 export default App
+
+const Navbar = styled('nav')({
+  display: 'flex',
+  alignItems: 'center',
+  padding: '1rem 4rem',
+})

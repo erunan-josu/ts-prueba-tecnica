@@ -6,18 +6,24 @@ import { ThemeProvider } from '@emotion/react'
 import { theme } from './styles/theme.js'
 import GlobalStyles from './styles/GlobalStyles'
 import { createTheme } from './styles/utils'
-/* import GlobalStyles from './styles/GlobalStyles' */
 import './index.css'
+import { store } from './store/store'
+import Home from './pages/Home'
+import { Provider } from 'react-redux'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={createTheme(theme, null)}>
       <GlobalStyles />
-      <BrowserRouter basename="/">
-        <Routes>
-          <Route path="/" element={<App />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter basename="/">
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 )
