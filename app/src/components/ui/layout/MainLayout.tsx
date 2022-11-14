@@ -11,8 +11,10 @@ const MainLayout = ({ children }: Props) => {
 export default MainLayout
 
 const StyledMainLayout = styled('div')({
-  height: '100vh',
+  minHeight: '100vh',
   display: 'grid',
   gridTemplateColumns: '1fr',
   gridTemplateRows: '10vh 1fr 10vh',
+  gridTemplateAreas: `'hd' 'main' 'ft'`,
+  background: '#f5efef',
 })
